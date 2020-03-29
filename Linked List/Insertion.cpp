@@ -12,7 +12,7 @@ void addpos(Node** head_ref)
 	Node* n= *head_ref;
 	int value,pos,i;
 	Node* new_nodep = new Node();
-	cout << "\nEnter the position after which data is to be inserted and the Data Data-\n";
+	cout << "\nEnter the position after which data is to be inserted and the Data-\n";
 	cin >> pos >> value;
 	for(i=1;i<pos;i++)
 	{
