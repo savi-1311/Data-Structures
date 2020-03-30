@@ -7,6 +7,21 @@ class Node
 		int data;
 		Node* next;
 };
+void deletepos(Node** head_ref)
+{
+	Node* temp = new Node();
+	Node* n= *head_ref;
+	int pos,i;
+	cout << "\nEnter the position you wish to delete-\n";
+	cin >> pos;
+	for(i=1;i<pos-1;i++)
+	{
+		n = n->next;
+	}
+	temp = n->next;
+	n->next = temp->next;
+	cout << "\n! Deleted Node at Specified Position !\n";
+}
 void deletefront(Node** head_ref)
 {
 	Node* temp = new Node();
@@ -20,7 +35,6 @@ void deletelast(Node** head_ref)
 	while(n->next->next != NULL)
 	{
 		n = n->next;
-		cout << "aa\n";
 	}
 	n->next = NULL;
 	cout << "\n! Deleted Last Node !\n";
@@ -63,7 +77,7 @@ int main()
 	printList(head);
 	deletelast(&head);
 	printList(head);
-//	deletepos(&head);
-//	printList(head);
+	deletepos(&head);
+	printList(head);
 	return 0;
 }
