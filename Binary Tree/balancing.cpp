@@ -44,11 +44,9 @@ void setleft(tree* p,int x)
 {
 	int y =x;
 	if(p==NULL)
-	cout << "Invalid Insertion1\n";
+	cout << "Invalid Insertion\n";
 	else if(p->left != NULL)
-	{
-	cout << "Invalid Insertion2\n";
-    }
+	cout << "Invalid Insertion\n";
 	else
 	p->left = makeTree(y);
 }
@@ -56,9 +54,9 @@ void setright(tree* p,int x)
 {
 	int y =x;
 	if(p==NULL)
-	cout << "Invalid Insertion11\n";
+	cout << "Invalid Insertion\n";
 	else if(p->right != NULL)
-	cout << "Invalid Insertion22\n";
+	cout << "Invalid Insertion\n";
 	else
 	p->right = makeTree(y);
 }
@@ -77,7 +75,8 @@ int main()
 	setleft(node,20);
 	setright(node,30);
 	setright(node->right,50);
-	setright(node->right->right,50);
+	setleft(node->left,40);
+	setleft(node->right,60);
 	cout << "preOrder-\n";
 	preOrder(node);
 	if(isBalanced(node))
