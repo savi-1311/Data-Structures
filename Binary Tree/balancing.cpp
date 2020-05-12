@@ -67,6 +67,7 @@ void preOrder(tree* p)
 		cout << p->data << "\n";
 		preOrder(p->left);
 		preOrder(p->right);
+		
 	}
 }
 int main()
