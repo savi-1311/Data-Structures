@@ -57,23 +57,23 @@ int main ()
 {
 	int n;
 	char ch = 'y';
-	cout << "Enter the total number of Vertices-";
+	cout << "Enter the total number of Vertices -\n";
 	cin >> n;
 	Graph g(n);
 	do
 	{
 		int pre,suc;
-		cout << "Enter the predecessor and the successor -\n";
+		cout << "Enter the indices of predecessor and the successor -\n";
 		cin >> pre >> suc ;
 		g.addEdge(pre, suc); 
 		cout << "Do You want to continue (y/n)-\n";
 		cin >> ch;
 		
-	}while(ch == 'y');
+	}while(ch != 'n');
 	int start; 
     cout << "Enter the starting Vertex for BFS-\n";
     cin >> start;
-    cout << "Starting from vertex " << start << "-\n";
+    cout << "Starting from vertex " << start << ", the BFS is as -\n";
     g.BFS(start);
 	return 0;
 }
