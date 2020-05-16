@@ -24,6 +24,10 @@ int main()
 	int n;
 	cout << "Enter the total no. of nodes -\n";
 	cin >> n;
+	if(n>50)
+	cout << "Overflow\n";
+	else
+	{
 	for(int i=0; i<n;i++)
 	{
 		cout << "Enter the name(char) of the node -\n";
@@ -52,5 +56,6 @@ int main()
 		for(int j=0;j<n;j++)
 		cout << g.arcs[i][j].weight << " ";
 	}
+}
 	return 0;
 }
